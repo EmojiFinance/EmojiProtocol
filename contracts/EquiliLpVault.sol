@@ -20,13 +20,6 @@ contract EquiliLpVault {
     address public immutable token0;
     address public immutable token1;
     bool public immutable stable;
-
-    address public immutable wkava = 0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b;
-    address public immutable usdc = 0xfA9343C3897324496A05fC75abeD6bAC29f8A40f;
-    address public immutable dai = 0x765277EebeCA2e31912C9946eAe1021199B39C61;
-    address public immutable vara = 0xE1da44C0dA55B075aE8E2e4b6986AdC76Ac77d73;
-    address public immutable eth = 0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D;
-    address public immutable wbtc = 0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b;
     
     address public immutable router = 0xA7544C409d772944017BB95B99484B6E0d7B6388;
 
