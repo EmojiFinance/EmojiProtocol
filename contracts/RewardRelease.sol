@@ -47,7 +47,7 @@ contract RewardRelease {
         UserInfo storage user = infos[_user];
         uint lockSize = user.locks.length;
         if (lockSize == 0 
-            || user.locks[lockSize - 1].startTs > block.timestamp - 1800) {
+            || user.locks[lockSize - 1].startTs < block.timestamp - 1200) {
             user.locks.push(LockInfo(block.timestamp, _amount));
         } else {
             user.locks[lockSize - 1].amount += _amount;
