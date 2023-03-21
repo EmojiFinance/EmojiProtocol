@@ -163,7 +163,7 @@ contract EquiliLpVault {
 
         user.pending += accRewardPerShare * user.amount / 10e12 - user.rewardDebt;
         user.amount += shareAmount;
-        user.rewardDebt = user.amount * accRewardPerShare / 1e12;
+        user.rewardDebt = user.amount * accRewardPerShare / 10e12;
 
         totalShareAmount += shareAmount;
         lastDepositTs[msg.sender] = block.timestamp;
