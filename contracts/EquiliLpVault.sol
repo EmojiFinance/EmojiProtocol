@@ -195,7 +195,7 @@ contract EquiliLpVault {
 
         user.pending += accRewardPerShare * user.amount / 10e12 - user.rewardDebt;
         user.amount -= shareAmount;
-        user.rewardDebt = user.amount * accRewardPerShare / 1e12;
+        user.rewardDebt = user.amount * accRewardPerShare / 10e12;
 
         totalShareAmount -= shareAmount;
 
@@ -252,7 +252,7 @@ contract EquiliLpVault {
         _updateReward();
 
         user.pending += accRewardPerShare * user.amount / 10e12 - user.rewardDebt;
-        user.rewardDebt = user.amount * accRewardPerShare / 1e12;
+        user.rewardDebt = user.amount * accRewardPerShare / 10e12;
 
         if (user.pending > 0) {
             IRewardRelease(rewarder).release(msg.sender, user.pending);
